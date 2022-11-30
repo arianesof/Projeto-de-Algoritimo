@@ -16,7 +16,7 @@ int main ()
   int Inteira = 0, Meia = 0;
   int quantidade;//quantidade 
   int masculino = 0, feminino = 0, opcao; 
-
+  int ingresso;
   float total, inteira[100], meia[100];//dinheiro
 
   char filme[2][100], sexo [100][20];
