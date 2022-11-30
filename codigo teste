@@ -12,15 +12,14 @@
 int main ()
 { int i;
   int sessoes,pessoas[10], idade[100];
-  int crianca = 0, adolescentes = 0, adulto = 0, idoso = 0, idadeMasculino =0, idadeFeminino = 0;//contadores
-  int Inteira = 0, qMeia = 0;//
+  int crianca = 0, adolescentes = 0, adulto = 0, idoso = 0, idadeMasculino =0, idadeFeminino = 0;
+  int Inteira = 0, Meia = 0;
   int quantidade;//quantidade 
-  int masculino = 0, feminino = 0, opcao;//contadores , e opcao de ingrresso 
+  int masculino = 0, feminino = 0, opcao; 
 
   float total, inteira[100], meia[100];//dinheiro
 
-  char filme[2][100], sexo [100][20];//nome do filme e ,caracteristica(masculino ou feminino)
-
+  char filme[2][100], sexo [100][20];
      do {
     printf ("Me forneca a quantidade de sessoes ? ");
     scanf ("%d", &sessoes);
