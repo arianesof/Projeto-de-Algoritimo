@@ -1,4 +1,6 @@
-//Para cada pessoa que assistiu ao filme deverá ser solicitado e validado o sexo (M -masculino, F - Feminino) e a idade (de 3 a 100 anos)
+//Solicite a quantidade de sessões, aceitando exatamente 2 (duas) sessões. OK
+//Solicite a quantidade de pessoas que assistiram ao filme, não aceitando valor inferior 10 OK
+//Para cada pessoa que assistiu ao filme deverá ser solicitado e validado o sexo (M -masculino, F - Feminino) e a idade (de 3 a 100 anos) - FALTA IDADE
 //Apresentar ao usuário apenas as opções Inteira e Meia (0,4 ponto), e somar o valor arrecadado na sessão, considerando que a inteira custa R$50,00 e a meia R$25,00
 //o nome do filme, a quantidade de pessoas do sexo feminino e a quantidade de pessoas do sexo masculino que assistiram ao filme
 //Depois da leitura dos dados de cada sessão, deverá ser mostrada a quantidade de pessoas maiores de idade (idade maior ou igual a 18 anos) do sexo M e F presentes 
