@@ -33,7 +33,7 @@ int main ()
 printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
 	  scanf ("%d", &pessoas[i]);
 	  
-	  printf (" A pessoa %d e do sexo Masculino ou Feminino: ");
+	  printf (" A pessoa e do sexo Masculino ou Feminino ? : ");
 	      fflush (stdin);//Limpa o Lixo de Memoria.
 	      scanf ("%s", &sexo);
 }
