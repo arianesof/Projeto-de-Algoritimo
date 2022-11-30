@@ -1,0 +1,38 @@
+//Para cada pessoa que assistiu ao filme deverá ser solicitado e validado o sexo (M -masculino, F - Feminino) e a idade (de 3 a 100 anos)
+//Apresentar ao usuário apenas as opções Inteira e Meia (0,4 ponto), e somar o valor arrecadado na sessão, considerando que a inteira custa R$50,00 e a meia R$25,00
+//o nome do filme, a quantidade de pessoas do sexo feminino e a quantidade de pessoas do sexo masculino que assistiram ao filme
+//Depois da leitura dos dados de cada sessão, deverá ser mostrada a quantidade de pessoas maiores de idade (idade maior ou igual a 18 anos) do sexo M e F presentes 
+//Informar o valor total arrecadado em cada sessão e informar se houve mais pagamento de inteira que de meia entrada
+
+#include <stdio.h>
+#include<string.h>
+
+int main ()
+{ int i;
+  int sessoes,pessoas[10], idade[100];
+  int crianca = 0, adolescentes = 0, adulto = 0, idoso = 0, idadeMasculino =0, idadeFeminino = 0;//contadores
+  int Inteira = 0, qMeia = 0;//
+  int quantidade;//quantidade 
+  int masculino = 0, feminino = 0, opcao;//contadores , e opcao de ingrresso 
+
+  float total, inteira[100], meia[100];//dinheiro
+
+  char filme[2][100], sexo [100][20];//nome do filme e ,caracteristica(masculino ou feminino)
+
+     do {
+    printf ("Me forneca a quantidade de sessoes ? ");
+    scanf ("%d", &sessoes);
+    
+    if (sessoes != 2)
+        printf("Valor invalido, digite novamente!\n");
+        
+  } while (sessoes != 2);
+
+
+printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
+	  scanf ("%d", &pessoas[i]);
+	  
+	  printf (" A pessoa %d e do sexo Masculino ou Feminino: ");
+	      fflush (stdin);//Limpa o Lixo de Memoria.
+	      scanf ("%s", &sexo);
+}
