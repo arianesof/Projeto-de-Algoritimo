@@ -44,7 +44,4 @@ printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
 		printf("Idade inválida!");
 	}
 	
-printf("VALORES \n Inteira = R$ 50.00 \n Meia = R$ 25.00 \n "); //valor já definido para o usuário escolher 
-    printf("Informe o ingresso desejado: \n");
-    scanf("%d", &ingresso);
-    }
+
