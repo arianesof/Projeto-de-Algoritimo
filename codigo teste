@@ -45,3 +45,36 @@ printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
 	}
 	
 
+
+using namespace std;
+
+int main() {
+    int idade, ingressos, pessoas, preco, total_preco;
+    pessoas = 1, total_preco = 0;
+
+    cout << "Quantos ingressos você quer ? ";
+    cin >> ingressos;
+    cout << "Número de ingressos: " << ingressos << endl;
+    while (ingressos >= pessoas) {
+        cout << "Insira a idade da pessoa " << pessoas << ": ";
+        cin >> idade;
+
+        {
+            if (idade >= 3 && idade <= 13) //paga meia -- criancas
+                preco = 10;
+            else if (idade >= 14 && idade <= 17) //paga meia -- adolescente
+                preco = 10;
+            else if(idade >= 18 && idade <= 64) //paga inteira -- adultos
+				preco = 30;
+			else //idosos
+				preco = 20;
+        }
+
+        total_preco += preco;
+
+        pessoas++;
+    }
+    cout << "Total preco is: " << total_preco;
+
+    return 0;
+}
