@@ -1,15 +1,19 @@
+/* Alunos : Ariane, Gustavo SSchiochet, Marcela Oliveira, Kaua */
+
 //Solicite a quantidade de sessões, aceitando exatamente 2 (duas) sessões. OK
 //Solicite a quantidade de pessoas que assistiram ao filme, não aceitando valor inferior 10 OK
 //Para cada pessoa que assistiu ao filme deverá ser solicitado e validado o sexo (M -masculino, F - Feminino) e a idade (de 3 a 100 anos) - FALTA IDADE
 //Apresentar ao usuário apenas as opções Inteira e Meia (0,4 ponto), e somar o valor arrecadado na sessão, considerando que a inteira custa R$50,00 e a meia R$25,00
 //o nome do filme, a quantidade de pessoas do sexo feminino e a quantidade de pessoas do sexo masculino que assistiram ao filme
+//A quantidade  de pessoas, seguindo a classificação por idade indicada ( idade:3-13 anos,14-17 anos,18-64 anos,65-100 anos/classific:crianças,adolescentes,adultos,idosos)
 //Depois da leitura dos dados de cada sessão, deverá ser mostrada a quantidade de pessoas maiores de idade (idade maior ou igual a 18 anos) do sexo M e F presentes 
 //Informar o valor total arrecadado em cada sessão e informar se houve mais pagamento de inteira que de meia entrada
 
 #include <stdio.h>
 #include<string.h>
 
-int main (){
+//Solicite a quantidade de sessões, aceitando exatamente 2 (duas) sessões
+  
   int i;
   int sessoes,pessoas[10], idade[100];
   int Inteira = 0, Meia = 0;
@@ -28,6 +32,7 @@ int main (){
         
   } while (sessoes != 2);
 
+//Solicite a quantidade de pessoas que assistiram ao filme, não aceitando valor inferior 10
 
 printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
 	  scanf ("%d", &pessoas[i]);
@@ -44,52 +49,79 @@ printf("Me forneca o numero de pessoas que assistiram o filme: ",filme[i]);
 		printf("Idade inválida!");
 	}
 	
-
-
-using namespace std;
-
-int main() {
-    int idade, ingressos, pessoas, preco, total_preco;
-    pessoas = 1, total_preco = 0;
-
-    cout << "Quantos ingressos você quer ? ";
-    cin >> ingressos;
-    cout << "Número de ingressos: " << ingressos << endl;
-    while (ingressos >= pessoas) {
-        cout << "Insira a idade da pessoa " << pessoas << ": ";
-        cin >> idade;
-
-        {
-            if (idade >= 3 && idade <= 13) //paga meia -- criancas
-                preco = 10;
-            else if (idade >= 14 && idade <= 17) //paga meia -- adolescente
-                preco = 10;
-            else if(idade >= 18 && idade <= 64) //paga inteira -- adultos
-				preco = 30;
-			else //idosos
-				preco = 20;
-        }
-
-        total_preco += preco;
-
-        pessoas++;
-    }
-    cout << "Total preco is: " << total_preco;
-
-    return 0;
 }
-#include <stdio.h>
-#include <stdlib.h>
 
-int main() {
-	int i, s, tipo_Ingresso;
+//Para cada pessoa que assistiu ao filme deverá ser solicitado e validado o sexo (M -masculino, F - Feminino) e a idade (de 3 a 100 anos) - FALTA IDADE
+
+
+        int i, s, tipo_Ingresso;
 	int maiorIdadeMasc = 0, maiorIdadeFem = 0, idade[100];
 	int masculino = 0, feminino = 0, crianca = 0, adolescente = 0, adulto = 0, idoso = 0;
 	int quantidade_inteira = 0, quantidade_meia = 0;
 	char sexo [100][20], nomeFilme [2][50];
 	float inteira[100], meia[100], total;
 	
+//Apresentar ao usuário apenas as opções Inteira e Meia  e somar o valor arrecadado na sessão, considerando que a inteira custa R$50,00 e a meia R$25,00
+
+printf(''informe a opcao desejada (inteira ou meia:'');
+scanf(''%s'',opcao);
+
+while(strcmp(opcao,''inteira'') != 0 &&
+strcmp(opcao,''meia'') != 0) {
+printf(''opcao invalida,informe a opcao desejada (inteira ou meia):'');
+scanf(''%s'',opcao);
+}
+
+//o nome do filme, a quantidade de pessoas do sexo feminino e a quantidade de pessoas do sexo masculino que assistiram ao filme
+int numfeminino = 0;
+int nummasculino = 0;
+
+  //le os daddos de cada pessoas e incrementa a contagem de pessoas de cada sexo
+     for(int i= 0; i < numpessoas; i++){
+     
+  //le o sexo e valida se ele e M ou F
+    if(sexo=='M'){
+    nummasculino++;
+    }else{
+    numfeminino++;
+    }
+  }
+  
+//A quantidade  de pessoas, seguindo a classificação por idade indicada (idade:3-13 anos,14-17 anos,18-64 anos,65-100 anos/classific:crianças,adolescentes,adultos,idosos)
+
+int faixa1 = 0;//3-5 anos
+int faixa2 = 0;//6-12;
+int faixa3 = 0;//13-17;
+int faixa4 = 0;//10 anos ou mais
+ 
+ //le os dados de cada pessoa e incremente a contagem de pessoas em cada faixa de idade
+   for (int i = 0; i < numpessoas++)(
+ //le a idade e valida se ela esta entre 3 e 100
+   if (idade >= 3 && idade <=5){
+   faixa1++;
+   } else if (idade >= 6 && idade <= 12){
+   faixa2++;
+   } else if (idade >= 13 && idade <= 17){
+   faixa3++;
+   } else }
+   faixa4++;
+   }
+   
+   }
+   
+   //exibe a quantidade de pessoas em cada faixa de idade
+   
+   printf(''quantidade de pessoas com idade entre 3 e 5 anos: %d/n'', faixa1);
+   
+   printf(''quantidade de pessoas  com idade entre 6 e 12 anos: %d/n'', faixa2);
+   
+   printf(''quantidade de pessoas com idade entre 13 e 17 anos:%d/n'' , faixa3);
+   
+   printf(''quantidade de pessoas com idade 18 anos ou mais: %d/n'', faixa4);
+   
+
 //aqui se a idade for maior que 18 e de acordo com o sexo selecionado, adicionando as variaveis. maiorIdadeFem = mulher maior de 18 e maiorIdadeMasc = homem maior de 18.
+	
 	if (idade[i] == 18 && sexo[s] == "F"){
 	maiorIdadeMasc+=1;
 }	
@@ -98,11 +130,13 @@ int main() {
 }
 	
 //tipo de ingresso comprado
+
     printf ("Tipo de ingresso:\n\n-1. inteira (R$ 50,00)\n-2. meia (R$ 25,00)\n");
     fflush(stdin);
 	scanf ("%d", &tipo_Ingresso); //valor do tipo do ingresso.
     
 //se o tipo de ingresso for maior que 2 ou menor que 1 repete o processo pois tem as opçoes 1 e 2.
+
 while (tipo_Ingresso > 2 || tipo_Ingresso < 1){
     printf ("Ingresso Invalido, \n1. inteira - R$ 50,00\n-2. meia - R$25,00\n");
     fflush(stdin);
@@ -110,6 +144,7 @@ while (tipo_Ingresso > 2 || tipo_Ingresso < 1){
 }
 
 //calculo do valor arrecadado para cada tipo de ingresso comprado.
+
 switch (tipo_Ingresso){
 	
 case 1:
@@ -126,12 +161,14 @@ break;
 }
 
 //dados contendo as informaçoes desejadas.
+
 printf ("Nome do Filme: %s\n", nomeFilme);
 printf ("Espectadores: \n-masculinos: %d\n-Femininos: %d\n", masculino, feminino);
 printf ("Quantidade de pessoas por faixa etaria:\n-Crianca: %d\n-Adolescente: %d\n-Adultos: %d\n-idosos: %d\n", crianca, adolescente, adulto, idoso);
 printf ("Pessoas maiores de idade:\n-Femininos: %d\n-Masculinos: %d\n", quantidade_meia, quantidade_inteira);
  
 //comparando de ingressos vendidos de meia e inteira.
+
 if (quantidade_inteira > quantidade_meia){
 	printf ("\nEssa sessao vendeu mais ingresso de inteira");
 }
