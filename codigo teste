@@ -103,7 +103,7 @@ int faixa4 = 0;//10 anos ou mais
    faixa2++;
    } else if (idade >= 13 && idade <= 17){
    faixa3++;
-   } else }
+   } else {
    faixa4++;
    }
    
